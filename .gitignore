@@ -1,0 +1,94 @@
+# Environnements virtuels Python
+.venv/
+venv/
+env/
+ENV/
+
+# Fichiers d'environnement et secrets
+.env
+.env.local
+.env.production
+.env.staging
+*.env
+
+# Garder uniquement le modèle d'environnement
+!.env.example
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Tests et couverture
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Typage et linting
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Logs
+*.log
+logs/
+uvicorn.log
+gunicorn.log
+
+# Base de données locale éventuelle
+*.sqlite
+*.sqlite3
+*.db
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# IDE / éditeurs
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+
+# Alembic : ne pas ignorer les migrations générées
+# Garder le dossier migrations/versions dans Git
+# Ignorer seulement les fichiers temporaires éventuels
+migrations/__pycache__/
+migrations/versions/__pycache__/
+
+# Fichiers temporaires
+*.tmp
+*.temp
+*.bak
+*.cache
