@@ -12,6 +12,12 @@ from app.models.base import SyncBase
 class Dette(SyncBase):
     __tablename__ = "dettes_table"
 
+    numero_dette: Mapped[str] = mapped_column(
+        String(100),
+        default="",
+        nullable=False,
+    )
+
     client_id: Mapped[uuid.UUID] = mapped_column(
         UUID(as_uuid=True),
         ForeignKey("clients_table.id"),
@@ -41,6 +47,12 @@ class Dette(SyncBase):
         nullable=False,
     )
 
+    montant_paye_usd: Mapped[int] = mapped_column(
+        BigInteger,
+        default=0,
+        nullable=False,
+    )
+
     montant_restant_usd: Mapped[int] = mapped_column(
         BigInteger,
         nullable=False,
@@ -64,4 +76,14 @@ class Dette(SyncBase):
     date_echeance: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
         nullable=False,
+    )
+
+    date_rappel_prevue: Mapped[Optional[datetime]] = mapped_column(
+        DateTime(timezone=True),
+        nullable=True,
+    )
+
+    date_derniere_alerte: Mapped[Optional[datetime]] = mapped_column(
+        DateTime(timezone=True),
+        nullable=True,
     )

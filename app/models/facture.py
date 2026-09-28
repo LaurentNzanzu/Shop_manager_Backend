@@ -28,6 +28,12 @@ class Facture(SyncBase):
         nullable=False,
     )
 
+    type_facture: Mapped[str] = mapped_column(
+        String(20),
+        default="VENTE",
+        nullable=False,
+    )
+
     montant_total_usd: Mapped[int] = mapped_column(
         BigInteger,
         nullable=False,

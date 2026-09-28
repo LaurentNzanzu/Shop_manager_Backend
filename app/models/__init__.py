@@ -13,6 +13,10 @@ from app.models.facture import Facture
 from app.models.ligne_facture import LigneFacture
 from app.models.mouvement_caisse import MouvementCaisse
 from app.models.dette import Dette
+from app.models.paiement_dette import PaiementDette
+from app.models.emprunt import Emprunt
+from app.models.ligne_emprunt import LigneEmprunt
+
 
 __all__ = [
     "Base",
@@ -31,4 +35,7 @@ __all__ = [
     "LigneFacture",
     "MouvementCaisse",
     "Dette",
+    "PaiementDette",
+    "Emprunt",
+    "LigneEmprunt",
 ]
