@@ -16,6 +16,7 @@ from app.models.dette import Dette
 from app.models.paiement_dette import PaiementDette
 from app.models.emprunt import Emprunt
 from app.models.ligne_emprunt import LigneEmprunt
+from app.models.cloture_journaliere import ClotureJournaliere
 
 
 __all__ = [
@@ -38,4 +39,5 @@ __all__ = [
     "PaiementDette",
     "Emprunt",
     "LigneEmprunt",
+    "ClotureJournaliere",
 ]
